@@ -1,4 +1,4 @@
-// Fichier : /api/streams.js
+// Fichier : /streams.js
 
 // On définit les constantes du projet
 const GAME_NAME = "Red Dead Redemption 2";
@@ -93,4 +93,5 @@ export default async function handler(request, response) {
     console.error(error);
     return response.status(500).json({ error: error.message });
   }
+
 }
