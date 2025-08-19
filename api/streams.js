@@ -1,4 +1,4 @@
-// Fichier : /api/streams.js (Version finale avec les autorisations CORS)
+// Fichier : /api/streams.js (Version corrigée avec les autorisations CORS)
 
 // On définit les constantes du projet
 const GAME_NAME = "Red Dead Redemption 2";
