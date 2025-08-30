@@ -1,3 +1,4 @@
+// Fichier : /api/streams.js (Version finale et robuste avec ID de jeu fixe)
 
 const GAME_ID = "493959"; // ID officiel de Red Dead Redemption 2 sur Twitch
 const KEYWORDS = ["Layton Valley", "LVRP", "LV RP"];
@@ -75,10 +76,3 @@ export default async function handler(request, response) {
     return response.status(500).json({ error: error.message });
   }
 }
-
-
-
-
-
-
-
