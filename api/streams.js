@@ -1,7 +1,7 @@
 // Fichier : /api/streams.js (Version corrigée avec les autorisations CORS)
 
 // On définit les constantes du projet
-const GAME_NAME = "Red Dead Redemption II";
+const GAME_NAME = "";
 const KEYWORDS = ["Layton Valley", "LVRP", "LV RP"];
 const LANGUAGE = "fr";
 const CACHE_TTL_SECONDS = 120; // 2 minutes
@@ -93,4 +93,5 @@ export default async function handler(request, response) {
     return response.status(500).json({ error: error.message });
   }
 }
+
 
