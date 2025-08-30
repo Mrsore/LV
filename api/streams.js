@@ -1,7 +1,7 @@
 // Fichier : /api/streams.js (Version corrigée avec les autorisations CORS)
 
 // On définit les constantes du projet
-const GAME_NAME = "493959";
+const GAME_ID  = "493959";
 const KEYWORDS = ["Layton Valley", "LVRP", "LV RP"];
 const LANGUAGE = "fr";
 const CACHE_TTL_SECONDS = 120; // 2 minutes
@@ -45,7 +45,7 @@ export default async function handler(request, response) {
 
     if (!accessToken) throw new Error("Impossible d'obtenir l'Access Token de Twitch.");
 
-    const gameResponse = await fetch(`https://api.twitch.tv/helix/games?name=${encodeURIComponent(GAME_NAME)}`, {
+    const gameResponse = await fetch(`https://api.twitch.tv/helix/games?name=${encodeURIComponent(GAME_ID)}`, {
       headers: { 'Client-ID': TWITCH_CLIENT_ID, 'Authorization': `Bearer ${accessToken}` },
     });
     const gameData = await gameResponse.json();
@@ -93,6 +93,7 @@ export default async function handler(request, response) {
     return response.status(500).json({ error: error.message });
   }
 }
+
 
 
 
